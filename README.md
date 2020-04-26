@@ -88,4 +88,13 @@ hbase(main):017:0> deleteall 'italians', '9'
 hbase(main):018:0> deleteall 'italians', '11'
 
 7. Crie um contador de idade 55 para o italiano de row id 5
+
+hbase(main):033:0> incr 'italians', '6', 'personal-data:idade', 55
+
+COUNTER VALUE = 55
+
 8. Incremente a idade do italiano em 1
+
+hbase(main):034:0> incr 'italians', '6', 'personal-data:idade', 1
+
+COUNTER VALUE = 56
